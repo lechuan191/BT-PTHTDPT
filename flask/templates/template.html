@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Parent Template</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
+
+    
+</head>
+  <body>
+      <div class="container-fluid center">
+        <h1 class="logo" >Bài tập kiểm tra</h1>
+        <strong>
+	<ul class="nav">
+	  <li class="nav-item">
+	    <a class="nav-link active" href="{{ url_for('home') }}">Home </a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="{{ url_for('trang2') }}">Trang2</a>
+	  </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('trang3') }}">Trang3</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url_for('trang4') }}">Trang4</a>
+    </li>
+	</ul>
+	</strong>
+
+</div>
+    
+{% block content %}
+{% endblock %}
+
+ </body>
+</html>
